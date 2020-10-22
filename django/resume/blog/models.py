@@ -13,6 +13,6 @@ class Blog(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('blog:blog_detail', kwargs={
-            'blog_id': self.id
+        return reverse('blog:blog_number', kwargs={
+            'blog_no': self.id
         })

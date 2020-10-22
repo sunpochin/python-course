@@ -12,8 +12,8 @@ def all_blogs(request):
     return render(request, 'blog/all_blogs.html', context)
 
 
-def blog_detail(request, blog_id):
-    item = get_object_or_404(Blog, id=blog_id)
+def blog_detail(request, blog_no):
+    item = get_object_or_404(Blog, id=blog_no)
     context = {
         'blog': item
     }
