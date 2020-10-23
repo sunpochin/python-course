@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import Project
 from .forms import ProjectFilter
 # Create your views here.
+# https://stackoverflow.com/questions/41218117/django-css-file-wont-update#
 
 
 def many_projects_func(request):
