@@ -3,6 +3,15 @@
 <br><br><br><br><br>
 
 <div class="container-fluid">
+  <p>Here you can search</p>
+  <form method="get">
+    <h3>{{ filtered.form }}</h3>
+    <button class="btn btn-secondary" type="submit">Search</button>
+  </form>
+
+</div>
+
+<div class="container-fluid">
   <div class="row">
 
     {% for item in projects %}

@@ -1,12 +1,17 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Project
+from .forms import ProjectFilter
 # Create your views here.
 
 
 def many_projects_func(request):
     items = Project.objects.all()
+    filtered = ProjectFilter(request.GET, queryset=items)
+    items = filtered.qs
+
     context = {
-        'projects': items
+        'projects': items,
+        'filtered': filtered,
     }
     return render(request, 'the_projects.html', context)
 
